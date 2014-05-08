@@ -13,6 +13,7 @@ import android.widget.EditText;
 public class HomeScreen extends Activity implements OnClickListener {
 
 	Button eventButton;
+	Button exitButton;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,9 @@ public class HomeScreen extends Activity implements OnClickListener {
 		
 		eventButton = (Button) findViewById(R.id.eventButton);
 		eventButton.setOnClickListener(this);
+		
+		exitButton = (Button) findViewById(R.id.exitButton);
+		exitButton.setOnClickListener(this);
 	}
 
 	@Override
@@ -35,6 +39,12 @@ public class HomeScreen extends Activity implements OnClickListener {
 	if(v == eventButton)
 	{
 		Intent intent = new Intent(this, CreateEventScreen.class);
+	    startActivity(intent);
+	}
+	
+	if(v == exitButton)
+	{
+		Intent intent = new Intent(this, LoginScreen.class);
 	    startActivity(intent);
 	}
 	}
