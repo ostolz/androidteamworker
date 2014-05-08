@@ -1,0 +1,45 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="de.iconiaone.teamplanbuch.LoginScreen"
+    tools:ignore="MergeRootFrame" >
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="294dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/username" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="294dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/login" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|fill_vertical"
+        android:hint="@string/register" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/cancel" />
+
+</GridLayout>
+
