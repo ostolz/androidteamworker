@@ -1,0 +1,6 @@
+androidteamworker/build.xml
+androidteamworker/local.properties
+androidteamworkerTest/ant.properties
+androidteamworkerTest/build.xml
+androidteamworkerTest/local.properties
+androidteamworkerTest/project.properties
