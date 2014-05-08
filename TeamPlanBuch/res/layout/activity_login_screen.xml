@@ -9,7 +9,7 @@
     tools:context=".LoginScreen" >
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/log_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -23,10 +23,10 @@
     </EditText>
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/log_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/username"
+        android:layout_below="@+id/log_username"
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:inputType="textPassword" />
@@ -35,8 +35,8 @@
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/username"
-        android:layout_below="@+id/password"
+        android:layout_alignLeft="@+id/log_username"
+        android:layout_below="@+id/log_password"
         android:layout_marginTop="14dp"
         android:text="@string/login" />
 
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/loginButton"
         android:layout_alignBottom="@+id/loginButton"
-        android:layout_alignRight="@+id/username"
+        android:layout_alignRight="@+id/log_username"
         android:text="@string/register" />
 
 </RelativeLayout>

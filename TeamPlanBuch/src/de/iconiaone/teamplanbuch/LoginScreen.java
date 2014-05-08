@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 
 public class LoginScreen extends Activity implements OnClickListener {
@@ -25,15 +26,19 @@ public class LoginScreen extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login_screen);
 		
-		username = (EditText) findViewById(R.id.username);
-		password = (EditText) findViewById(R.id.password);
+		username = (EditText) findViewById(R.id.log_username);
+		password = (EditText) findViewById(R.id.log_password);
 		loginButton = (Button) findViewById(R.id.loginButton);
 		registerButton = (Button) findViewById(R.id.registerButton);
 		
+		loginButton.setOnClickListener(this);
+		registerButton.setOnClickListener(this);
+		
+		// Datenbank wird angelegt (falls nicht vorhanden) und geöffnet
 		database = openOrCreateDatabase("TeamPlanBuchDatabase", MODE_PRIVATE, null);
 		String createUserTable = 
 				"CREATE TABLE IF NOT EXISTS user" +
-				" (userId INTEGER PRIMRY KEY, username VARCHAR, password VARCHAR)";
+				" (userId INTEGER PRIMRY KEY, username VARCHAR, nachname VARCHAR, vorname VARCHAR password VARCHAR)";
 		database.execSQL(createUserTable);
 	}
 
@@ -53,7 +58,8 @@ public class LoginScreen extends Activity implements OnClickListener {
 		
 		if(v == registerButton)
 		{
-			// Registrierung ausführen
+			Intent intent = new Intent(this, RegisterScreen.class);
+		    startActivity(intent);
 		}
 	}
 
