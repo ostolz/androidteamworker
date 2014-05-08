@@ -9,18 +9,24 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-public class HomeScreen extends Activity implements OnClickListener {
+public class CreateEventScreen extends Activity implements OnClickListener {
 
-	Button eventButton;
+	Button createEventButton;
+	Button backHomeButton;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_home_screen);
+		setContentView(R.layout.activity_create_event_screen);
 		
-		eventButton = (Button) findViewById(R.id.eventButton);
-		eventButton.setOnClickListener(this);
+		createEventButton = (Button) findViewById(R.id.createEventButton);
+		createEventButton.setOnClickListener(this);
+		
+		backHomeButton = (Button) findViewById(R.id.backHomeButton);
+		backHomeButton.setOnClickListener(this);
+		
 	}
 
 	@Override
@@ -32,9 +38,14 @@ public class HomeScreen extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-	if(v == eventButton)
+	if(v == createEventButton)
 	{
-		Intent intent = new Intent(this, CreateEventScreen.class);
+		Toast.makeText(getApplicationContext(),	"Termin erfolgreich erstellt", Toast.LENGTH_LONG).show();
+	}
+	
+	if(v == backHomeButton)
+	{
+		Intent intent = new Intent(this, HomeScreen.class);
 	    startActivity(intent);
 	}
 	}

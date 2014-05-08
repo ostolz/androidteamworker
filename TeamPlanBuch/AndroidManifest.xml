@@ -30,6 +30,10 @@
             android:name="de.iconiaone.teamplanbuch.HomeScreen"
             android:label="@string/title_activity_home_screen" >
         </activity>
+        <activity
+            android:name="de.iconiaone.teamplanbuch.CreateEventScreen"
+            android:label="@string/title_activity_create_event_screen" >
+        </activity>
     </application>
 
 </manifest>

@@ -9,23 +9,22 @@
     tools:context=".LoginScreen" >
 
     <Button
-        android:id="@+id/eventButton"
+        android:id="@+id/backHomeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="242dp"
-        android:layout_marginLeft="34dp"
-        android:text="@string/event" />
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="157dp"
+        android:layout_marginRight="39dp"
+        android:text="@string/back_home" />
 
     <Button
-        android:id="@+id/exitButton"
+        android:id="@+id/createEventButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/eventButton"
-        android:layout_alignRight="@+id/eventButton"
-        android:layout_alignTop="@+id/eventButton"
-        android:layout_marginTop="72dp"
-        android:text="@string/exit" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/backHomeButton"
+        android:layout_marginLeft="35dp"
+        android:text="@string/create_event" />
 
 </RelativeLayout>

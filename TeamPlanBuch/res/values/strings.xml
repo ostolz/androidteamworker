@@ -18,5 +18,8 @@
     <string name="strasse">Strasse+Hausnummer</string>
     <string name="password">Passwort</string>
     <string name="passwordconfirm">Passwort wiederholen</string>
-
+    <string name="title_activity_create_event_screen">CreateEventScreen</string>
+    <string name="back_home">Home</string>
+    <string name="create_event">Termin erstellen</string>
+<string name="exit">Abmelden</string>
 </resources>
