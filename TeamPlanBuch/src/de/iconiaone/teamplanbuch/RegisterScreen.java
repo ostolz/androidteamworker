@@ -2,12 +2,14 @@ package de.iconiaone.teamplanbuch;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class RegisterScreen extends Activity implements OnClickListener {
 
@@ -59,11 +61,19 @@ public class RegisterScreen extends Activity implements OnClickListener {
 			vPassword = password.getText().toString();
 			vPasswordConfirm = passwordConfirm.getText().toString();
 			
-			String insertQuery = 
+			if (vPassword.equals(vPasswordConfirm)){
+				Toast.makeText(getApplicationContext(),	"well done", Toast.LENGTH_LONG).show();
+				Intent intent = new Intent(this, LoginScreen.class);
+				startActivity(intent);
+			}
+			
+			else Toast.makeText(getApplicationContext(), "unterschiedliche Passwörter", Toast.LENGTH_LONG).show();
+			
+			/*String insertQuery = 
 					"INSERT INTO user (username, nachname, vorname, password) " +
 					"VALUES ('" + vUsername + "', '" + vNachname + "', '" + vVorname + "', '" + vPassword + "')";
 			
-			database.execSQL(insertQuery);
+			database.execSQL(insertQuery);*/
 		}
 	}
 

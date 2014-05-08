@@ -26,6 +26,10 @@
             android:name="de.iconiaone.teamplanbuch.RegisterScreen"
             android:label="@string/title_activity_register_screen" >
         </activity>
+        <activity
+            android:name="de.iconiaone.teamplanbuch.HomeScreen"
+            android:label="@string/title_activity_home_screen" >
+        </activity>
     </application>
 
 </manifest>

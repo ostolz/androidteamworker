@@ -53,8 +53,8 @@ public class LoginScreen extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		if(v == loginButton)
 		{
-			// Login ausführen
-		}
+			Intent intent = new Intent(this, HomeScreen.class);
+		    startActivity(intent);		}
 		
 		if(v == registerButton)
 		{

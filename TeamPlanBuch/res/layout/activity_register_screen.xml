@@ -13,27 +13,61 @@
     <Spinner
         android:id="@+id/teamSelection"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+          />
+
+    <EditText
+        android:id="@+id/reg_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:ems="10"
+        android:hint="@string/username" />
 
     <EditText
         android:id="@+id/vorname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="" />
+        android:hint="@string/vorname" />
+
+    <EditText
+        android:id="@+id/nachname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:hint="@string/nachname">
+
+        <requestFocus />
+    </EditText>
 
     <EditText
         android:id="@+id/strasse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10" />
+        android:ems="10"
+        android:hint="@string/strasse" />
 
     <EditText
-        android:id="@+id/password_confirm"
+        android:id="@+id/plz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:hint="@string/plz"/>
+
+    <EditText
+        android:id="@+id/wohnort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:hint="@string/wohnort"/>
+
+    <EditText
+        android:id="@+id/mail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:hint="@string/mail" />
 
     <EditText
         android:id="@+id/reg_password"
@@ -41,6 +75,15 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="17dp"
         android:ems="10"
+        android:inputType="textPassword" 
+        android:hint="@string/password"/>
+
+    <EditText
+        android:id="@+id/password_confirm"
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/passwordconfirm"
         android:inputType="textPassword" />
 
     <Button
@@ -49,40 +92,5 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="34dp"
         android:text="Submit" />
-
-    <EditText
-        android:id="@+id/mail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10" />
-
-    <EditText
-        android:id="@+id/reg_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
-        android:ems="10"
-        android:hint="@string/username" >
-
-        <requestFocus />
-    </EditText>
-
-    <EditText
-        android:id="@+id/plz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10" />
-
-    <EditText
-        android:id="@+id/wohnort"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10" />
-
-    <EditText
-        android:id="@+id/nachname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10" />
 
 </LinearLayout>
