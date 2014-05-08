@@ -20,6 +20,7 @@ public class HomeScreen extends Activity implements OnClickListener {
 		setContentView(R.layout.activity_home_screen);
 		
 		eventButton = (Button) findViewById(R.id.eventButton);
+		eventButton.setOnClickListener(this);
 	}
 
 	@Override
