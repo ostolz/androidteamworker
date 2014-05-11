@@ -66,12 +66,12 @@ public class UserFunctions {
      * Function get Login status
      * */
     public boolean isUserLoggedIn(Context context){
-        DatabaseHandler db = new DatabaseHandler(context);
+        /*DatabaseHandler db = new DatabaseHandler(context);
         int count = db.getRowCount();
         if(count > 0){
             // user logged in
             return true;
-        }
+        }*/
         return false;
     }
      
@@ -80,8 +80,8 @@ public class UserFunctions {
      * Reset Database
      * */
     public boolean logoutUser(Context context){
-        DatabaseHandler db = new DatabaseHandler(context);
-        db.resetTables();
+        /*DatabaseHandler db = new DatabaseHandler(context);
+        db.resetTables();*/
         return true;
     }
      
