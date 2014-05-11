@@ -11,9 +11,9 @@ Feature: Register feature
     Then I enter text "strasse" into field with id "strasse"
     Then I enter text "78166" into field with id "plz"
     Then I enter text "Donaueschingen" into field with id "wohnort"
-    Then I enter text "mail" into field with id "dr.alk.prost@hopfen.de"
+    Then I enter text "dr.alk.prost@hopfen.de" into field with id "mail"
     Then I enter text "password" into field with id "reg_password"
     Then I enter text "password" into field with id "password_confirm"
 	
     Then I press "Submit"
-    Then I see "LoginScreen"
+    Then I see "TeamPlanBuch"
