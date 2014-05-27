@@ -6,3 +6,4 @@ TeamPlanBuch/local.properties
 TeamPlanBuch/project.properties
 TeamPlanBuch/bin
 TeamPlanBuch/gen
+*.cache
