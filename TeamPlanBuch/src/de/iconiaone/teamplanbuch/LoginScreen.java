@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-
+import android.widget.Toast;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -34,12 +34,14 @@ public class LoginScreen extends Activity implements OnClickListener {
 		loginButton.setOnClickListener(this);
 		registerButton.setOnClickListener(this);
 		
-		// Datenbank wird angelegt (falls nicht vorhanden) und geöffnet
-		database = openOrCreateDatabase("TeamPlanBuchDatabase", MODE_PRIVATE, null);
-		String createUserTable = 
-				"CREATE TABLE IF NOT EXISTS user" +
-				" (userId INTEGER PRIMRY KEY, username VARCHAR, nachname VARCHAR, vorname VARCHAR password VARCHAR)";
-		database.execSQL(createUserTable);
+		
+		
+//		// Datenbank wird angelegt (falls nicht vorhanden) und geöffnet
+//		database = openOrCreateDatabase("TeamPlanBuchDatabase", MODE_PRIVATE, null);
+//		String createUserTable = 
+//				"CREATE TABLE IF NOT EXISTS user" +
+//				" (userId INTEGER PRIMRY KEY, username VARCHAR, nachname VARCHAR, vorname VARCHAR password VARCHAR)";
+//		database.execSQL(createUserTable);
 	}
 
 	@Override
@@ -52,9 +54,19 @@ public class LoginScreen extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		if(v == loginButton)
-		{
-			Intent intent = new Intent(this, HomeScreen.class);
-		    startActivity(intent);		}
+		{	
+			String vUsername, vPassword;
+			
+			vUsername = username.toString();
+			vPassword = password.toString();
+			
+			if(DBOperations.checkLogin(vUsername, vPassword))
+			{
+				Intent intent = new Intent(this, HomeScreen.class);
+			    startActivity(intent);		
+			}
+		}
+		else Toast.makeText(getApplicationContext(), "Login fehlgeschlagen", Toast.LENGTH_LONG).show();
 		
 		if(v == registerButton)
 		{

@@ -21,6 +21,7 @@ public class RegisterScreen extends Activity implements OnClickListener {
 	EditText vorname;
 	EditText password;
 	EditText passwordConfirm;
+	EditText email;
 	Button submitButton;
 	
 	@Override
@@ -34,12 +35,14 @@ public class RegisterScreen extends Activity implements OnClickListener {
 		vorname = (EditText) findViewById(R.id.vorname);
 		password = (EditText) findViewById(R.id.reg_password);
 		passwordConfirm = (EditText) findViewById(R.id.password_confirm);
+		email = (EditText) findViewById(R.id.mail);
+		
 		
 		submitButton = (Button) findViewById(R.id.submit);
 		
 		submitButton.setOnClickListener(this);
 		
-		database = openOrCreateDatabase("TeamPlanBuchDatabase", MODE_PRIVATE, null);
+//		database = openOrCreateDatabase("TeamPlanBuchDatabase", MODE_PRIVATE, null);
 	}
 
 	@Override
@@ -53,27 +56,35 @@ public class RegisterScreen extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		if(v == submitButton)
 		{
-			String vUsername, vNachname, vVorname, vPassword, vPasswordConfirm;
+			String vUsername, vNachname, vVorname, vPassword, vPasswordConfirm, vEmail;
 			
 			vUsername = username.getText().toString();
 			vNachname = nachname.getText().toString();
 			vVorname = vorname.getText().toString();
 			vPassword = password.getText().toString();
 			vPasswordConfirm = passwordConfirm.getText().toString();
+			vEmail = email.getText().toString();
 			
-			if (vPassword.equals(vPasswordConfirm)){
-				Toast.makeText(getApplicationContext(),	"well done", Toast.LENGTH_LONG).show();
-				Intent intent = new Intent(this, LoginScreen.class);
-				startActivity(intent);
+			if (vPassword.equals(vPasswordConfirm))
+			{
+				if(DBOperations.checkUserExist(vUsername))
+				{
+					//TODO Toast:User existiert bereits
+					Toast.makeText(getApplicationContext(), "Benutzername existiert bereits", Toast.LENGTH_LONG).show();
+				}
+				else
+				{	//Registrieren
+					if(DBOperations.registerUser(vUsername, vPassword, vEmail) )
+					{
+						Toast.makeText(getApplicationContext(), "Registrierung erfolgreich durchgeführt", Toast.LENGTH_LONG).show();
+					}
+					else
+					{
+						Toast.makeText(getApplicationContext(), "Registrierung fehlgeschlagen", Toast.LENGTH_LONG).show();
+					}
+				}
 			}
-			
-			else Toast.makeText(getApplicationContext(), "unterschiedliche Passwörter", Toast.LENGTH_LONG).show();
-			
-			/*String insertQuery = 
-					"INSERT INTO user (username, nachname, vorname, password) " +
-					"VALUES ('" + vUsername + "', '" + vNachname + "', '" + vVorname + "', '" + vPassword + "')";
-			
-			database.execSQL(insertQuery);*/
+			else Toast.makeText(getApplicationContext(), "Passwörter stimmen nicht überein", Toast.LENGTH_LONG).show();
 		}
 	}
 
