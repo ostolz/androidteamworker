@@ -65,8 +65,10 @@ public class LoginScreen extends Activity implements OnClickListener {
 				Intent intent = new Intent(this, HomeScreen.class);
 			    startActivity(intent);		
 			}
+			else
+				Toast.makeText(getApplicationContext(), "Login fehlgeschlagen", Toast.LENGTH_LONG).show();
 		}
-		else Toast.makeText(getApplicationContext(), "Login fehlgeschlagen", Toast.LENGTH_LONG).show();
+		
 		
 		if(v == registerButton)
 		{

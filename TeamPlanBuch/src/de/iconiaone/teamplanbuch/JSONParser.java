@@ -30,7 +30,7 @@ public class JSONParser {
  
     }
  
-    public JSONObject getJSONFromUrl(String url, List<NameValuePair> params) {
+    public static JSONObject getJSONFromUrl(String url, List<NameValuePair> params) {
  
         // Making HTTP request
         try {
