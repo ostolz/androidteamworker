@@ -2,7 +2,9 @@ package de.iconiaone.teamplanbuch;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,8 +46,13 @@ public class DBOperations {
 	}
 	
 	public static boolean checkLogin(String user, String pass) 
-	{
-		return (checkUserExist(user) && checkUserPassword (user, pass)) ? true : false;
+	{	boolean s = false;
+		try {
+	         if(checkUserExist(user) && checkUserPassword (user, pass))
+	        	 s = true;
+	     }
+		finally {System.out.println(s);}
+		return s;
 	}
 	public static boolean checkUserExist(String user)
 	{			
