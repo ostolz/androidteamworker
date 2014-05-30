@@ -47,11 +47,8 @@ public class DBOperations {
 	
 	public static boolean checkLogin(String user, String pass) 
 	{	boolean s = false;
-		try {
-	         if(checkUserExist(user) && checkUserPassword (user, pass))
-	        	 s = true;
-	     }
-		finally {System.out.println(s);}
+     	if(checkUserExist(user) && checkUserPassword (user, pass))
+     		s = true;
 		return s;
 	}
 	public static boolean checkUserExist(String user)
