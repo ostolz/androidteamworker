@@ -37,12 +37,10 @@ public class RegisterScreen extends Activity implements OnClickListener {
 		passwordConfirm = (EditText) findViewById(R.id.password_confirm);
 		email = (EditText) findViewById(R.id.mail);
 		
-		
 		submitButton = (Button) findViewById(R.id.submit);
 		
 		submitButton.setOnClickListener(this);
 		
-//		database = openOrCreateDatabase("TeamPlanBuchDatabase", MODE_PRIVATE, null);
 	}
 
 	@Override
@@ -69,7 +67,6 @@ public class RegisterScreen extends Activity implements OnClickListener {
 			{
 				if(DBOperations.checkUserExist(vUsername))
 				{
-					//TODO Toast:User existiert bereits
 					Toast.makeText(getApplicationContext(), "Benutzername existiert bereits", Toast.LENGTH_LONG).show();
 				}
 				else

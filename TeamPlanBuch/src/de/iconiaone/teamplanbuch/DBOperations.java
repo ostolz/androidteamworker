@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DBOperations {
-	private static final String URL ="http://xxx/";
+	private static final String URL ="http://192.168.245.138/";
 	private static final String DBREGISTER = URL + "DB_Register.php";
 	private static final String DBCHECKUSER = URL + "DB_CheckUser.php";
 	private static final String DBLOGIN = URL + "DB_Login.php";
@@ -48,8 +48,7 @@ public class DBOperations {
 		return (checkUserExist(user) && checkUserPassword (user, pass)) ? true : false;
 	}
 	public static boolean checkUserExist(String user)
-	{	
-		
+	{			
 		List<NameValuePair> params = new ArrayList<NameValuePair>();
 		params.add(new BasicNameValuePair("username", user));
 		JSONObject response;
