@@ -1,7 +1,7 @@
 <?php
 $response = array();
 
-if (!isset($_POST['username']))
+if (isset($_POST['username']))
 {
 $username = $_POST['username'];
 require_once __DIR__.'/DB_Connect.php';
