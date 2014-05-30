@@ -19,7 +19,13 @@ public class DBOperations {
 		params.add(new BasicNameValuePair("username", user));
 		params.add(new BasicNameValuePair("password", pass));
 		params.add(new BasicNameValuePair("email", email));
-		JSONObject response;
+		params.add(new BasicNameValuePair("surname", sur));
+		params.add(new BasicNameValuePair("lastname", last));
+		params.add(new BasicNameValuePair("teampreferred", teampreferred));
+		params.add(new BasicNameValuePair("address", address));
+		params.add(new BasicNameValuePair("plz", plz));
+		params.add(new BasicNameValuePair("wohnort", wohnort));
+		JSONObject response = new JSONObject();
 		response = JSONParser.getJSONFromUrl(DBREGISTER, params);
 //TODO: RÜCKGABE MIT LOGIK VERSEHEN
 		return true;
