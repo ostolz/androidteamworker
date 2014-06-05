@@ -59,7 +59,7 @@ public class DBOperations {
 		JSONObject response;
 		//response = JSONParser.getJSONFromUrl(DBCHECKUSER, params);
 //TODO: RÜCKGABE MIT LOGIK VERSEHEN
-		return false;
+		return true;
 	}
 	
 	public static boolean checkUserPassword(String user, String pass)
