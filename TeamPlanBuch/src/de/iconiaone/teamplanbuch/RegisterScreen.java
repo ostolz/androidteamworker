@@ -74,6 +74,7 @@ public class RegisterScreen extends Activity implements OnClickListener {
 					if(DBOperations.registerUser(vUsername, vPassword, vEmail) )
 					{
 						Toast.makeText(getApplicationContext(), "Registrierung erfolgreich durchgeführt", Toast.LENGTH_LONG).show();
+						finish();
 					}
 					else
 					{
