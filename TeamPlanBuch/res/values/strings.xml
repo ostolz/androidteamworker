@@ -18,8 +18,16 @@
     <string name="strasse">Strasse+Hausnummer</string>
     <string name="password">Passwort</string>
     <string name="passwordconfirm">Passwort wiederholen</string>
-    <string name="title_activity_create_event_screen">CreateEventScreen</string>
+    <string name="title_activity_create_event_screen">CreateEventScreen</string>     
+    <string name="title_activity_mail_screen">CreateEventScreen</string>    
+    <string name="title_activity_settings_screen">CreateEventScreen</string>   
     <string name="back_home">Home</string>
     <string name="create_event">Termin erstellen</string>
-<string name="exit">Abmelden</string>
+	<string name="exit">Abmelden</string>
+	<string name="logout">Logout</string>
+	<string name="profil">Profil</string>
+	<string name="contact">Mail an Leiter</string>
+	<string name="team">Team</string>
+	<string name="nowitzki">nowitzki</string>
+	<string name="eventlist">Liste der Events</string>
 </resources>

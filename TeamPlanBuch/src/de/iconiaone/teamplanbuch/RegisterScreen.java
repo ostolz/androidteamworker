@@ -7,13 +7,17 @@ import android.database.sqlite.SQLiteDatabase;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class RegisterScreen extends Activity implements OnClickListener {
 
 	SQLiteDatabase database;
+	
+	private String array_spinner[];
 	
 	// GUI Elemente
 	EditText username;
@@ -41,6 +45,16 @@ public class RegisterScreen extends Activity implements OnClickListener {
 		
 		submitButton.setOnClickListener(this);
 		
+		array_spinner = new String[4];
+        array_spinner[0]="Team 1";
+        array_spinner[1]="Team 2";
+        array_spinner[2]="Team 3";
+        array_spinner[3]="Team 4";
+        Spinner s = (Spinner) findViewById(R.id.teamSelection);
+        ArrayAdapter adapter = new ArrayAdapter(this,
+        android.R.layout.simple_spinner_item, array_spinner);
+        s.setAdapter(adapter);
+		
 	}
 
 	@Override
@@ -49,7 +63,7 @@ public class RegisterScreen extends Activity implements OnClickListener {
 		getMenuInflater().inflate(R.menu.register_screen, menu);
 		return true;
 	}
-
+	
 	@Override
 	public void onClick(View v) {
 		if(v == submitButton)

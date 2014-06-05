@@ -16,11 +16,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:ems="10" 
-        android:hint="@string/username"
-        >
-
-        <requestFocus />
-    </EditText>
+        android:hint="@string/username" />
 
     <EditText
         android:id="@+id/log_password"
@@ -29,6 +25,7 @@
         android:layout_below="@+id/log_username"
         android:layout_centerHorizontal="true"
         android:ems="10"
+        android:hint="@string/password"
         android:inputType="textPassword" />
 
     <Button
@@ -48,5 +45,13 @@
         android:layout_alignBottom="@+id/loginButton"
         android:layout_alignRight="@+id/log_username"
         android:text="@string/register" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/free_sport" />
 
 </RelativeLayout>

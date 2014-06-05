@@ -36,6 +36,14 @@
             android:name="de.iconiaone.teamplanbuch.CreateEventScreen"
             android:label="@string/title_activity_create_event_screen" >
         </activity>
+        <activity
+            android:name="de.iconiaone.teamplanbuch.MailScreen"
+            android:label="@string/title_activity_mail_screen" >
+        </activity>
+        <activity
+            android:name="de.iconiaone.teamplanbuch.SettingsScreen"
+            android:label="@string/title_activity_settings_screen" >
+        </activity>
     </application>
 
 </manifest>

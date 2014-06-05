@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -15,7 +16,7 @@ public class HomeScreen extends Activity implements OnClickListener {
 	Button eventButton;
 	Button exitButton;
 	
-	@Override
+	/*@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home_screen);
@@ -25,6 +26,27 @@ public class HomeScreen extends Activity implements OnClickListener {
 		
 		exitButton = (Button) findViewById(R.id.exitButton);
 		exitButton.setOnClickListener(this);
+	}*/
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle item selection
+	    switch (item.getItemId()) {
+	        case R.id.event:
+	        	Intent intent1 = new Intent(this, CreateEventScreen.class);
+	    	    startActivity(intent1);
+	            return true;
+	        case R.id.logout:
+	        	Intent intent2 = new Intent(this, LoginScreen.class);
+	    	    startActivity(intent2);
+	            return true;
+	        case R.id.mail:
+	        	Intent intent3 = new Intent(this, MailScreen.class);
+	        	startActivity(intent3);
+	        	return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
 	}
 
 	@Override
