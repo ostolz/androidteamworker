@@ -28,7 +28,7 @@ public class DBOperations {
 		params.add(new BasicNameValuePair("plz", plz));
 		params.add(new BasicNameValuePair("wohnort", wohnort));
 		JSONObject response = new JSONObject();
-		response = JSONParser.getJSONFromUrl(DBREGISTER, params);
+		//response = JSONParser.getJSONFromUrl(DBREGISTER, params);
 //TODO: RÜCKGABE MIT LOGIK VERSEHEN
 		return true;
 	}
@@ -40,7 +40,7 @@ public class DBOperations {
 		params.add(new BasicNameValuePair("password", pass));
 		params.add(new BasicNameValuePair("email", email));
 		JSONObject response;
-		response = JSONParser.getJSONFromUrl(DBREGISTER, params);
+		//response = JSONParser.getJSONFromUrl(DBREGISTER, params);
 //TODO: RÜCKGABE MIT LOGIK VERSEHEN
 		return true;
 	}
@@ -51,12 +51,13 @@ public class DBOperations {
      		s = true;
 		return s;
 	}
+	
 	public static boolean checkUserExist(String user)
 	{			
 		List<NameValuePair> params = new ArrayList<NameValuePair>();
 		params.add(new BasicNameValuePair("username", user));
 		JSONObject response;
-		response = JSONParser.getJSONFromUrl(DBCHECKUSER, params);
+		//response = JSONParser.getJSONFromUrl(DBCHECKUSER, params);
 //TODO: RÜCKGABE MIT LOGIK VERSEHEN
 		return false;
 	}
@@ -67,7 +68,7 @@ public class DBOperations {
 		params.add(new BasicNameValuePair("username", user));
 		params.add(new BasicNameValuePair("password", pass));
 		JSONObject response;
-		response = JSONParser.getJSONFromUrl(DBLOGIN, params);
+		//response = JSONParser.getJSONFromUrl(DBLOGIN, params);
 //TODO: RÜCKGABE MIT LOGIK VERSEHEN
 		return true;
 	}

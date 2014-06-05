@@ -33,15 +33,6 @@ public class LoginScreen extends Activity implements OnClickListener {
 		
 		loginButton.setOnClickListener(this);
 		registerButton.setOnClickListener(this);
-		
-		
-		
-//		// Datenbank wird angelegt (falls nicht vorhanden) und geöffnet
-//		database = openOrCreateDatabase("TeamPlanBuchDatabase", MODE_PRIVATE, null);
-//		String createUserTable = 
-//				"CREATE TABLE IF NOT EXISTS user" +
-//				" (userId INTEGER PRIMRY KEY, username VARCHAR, nachname VARCHAR, vorname VARCHAR password VARCHAR)";
-//		database.execSQL(createUserTable);
 	}
 
 	@Override
@@ -57,8 +48,8 @@ public class LoginScreen extends Activity implements OnClickListener {
 		{	
 			String vUsername, vPassword;
 			
-			vUsername = username.toString();
-			vPassword = password.toString();
+			vUsername = username.getText().toString();
+			vPassword = password.getText().toString();
 			
 			if(DBOperations.checkLogin(vUsername, vPassword))
 			{
