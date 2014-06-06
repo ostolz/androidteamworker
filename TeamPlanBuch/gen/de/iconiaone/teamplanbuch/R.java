@@ -28,32 +28,33 @@ public final class R {
     }
     public static final class id {
         public static final int LinearLayout1=0x7f080000;
-        public static final int action_settings=0x7f080019;
+        public static final int action_settings=0x7f08001a;
         public static final int backHomeButton=0x7f080003;
         public static final int calendarView1=0x7f080001;
-        public static final int contact=0x7f08001c;
+        public static final int contact=0x7f08001d;
         public static final int createEventButton=0x7f080002;
         public static final int editText1=0x7f08000c;
         public static final int editText2=0x7f08000d;
-        public static final int event=0x7f08001a;
-        public static final int imageView1=0x7f080005;
+        public static final int event=0x7f08001b;
+        public static final int imageView1=0x7f080006;
         public static final int log_password=0x7f080009;
         public static final int log_username=0x7f080008;
         public static final int loginButton=0x7f08000a;
-        public static final int logout=0x7f08001d;
+        public static final int logout=0x7f08001e;
         public static final int mail=0x7f080015;
         public static final int nachname=0x7f080011;
         public static final int password_confirm=0x7f080017;
         public static final int plz=0x7f080013;
-        public static final int profil=0x7f08001b;
+        public static final int profil=0x7f08001c;
         public static final int reg_password=0x7f080016;
         public static final int reg_username=0x7f08000f;
         public static final int registerButton=0x7f08000b;
+        public static final int spinner1=0x7f080019;
         public static final int strasse=0x7f080012;
         public static final int submit=0x7f080018;
         public static final int teamSelection=0x7f08000e;
         public static final int textView1=0x7f080004;
-        public static final int textView2=0x7f080006;
+        public static final int textView2=0x7f080005;
         public static final int textView3=0x7f080007;
         public static final int vorname=0x7f080010;
         public static final int wohnort=0x7f080014;
@@ -70,7 +71,9 @@ public final class R {
         public static final int create_event_screen=0x7f070000;
         public static final int home_screen=0x7f070001;
         public static final int login_screen=0x7f070002;
-        public static final int register_screen=0x7f070003;
+        public static final int mail_screen=0x7f070003;
+        public static final int register_screen=0x7f070004;
+        public static final int settings_screen=0x7f070005;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
