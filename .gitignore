@@ -7,3 +7,4 @@ TeamPlanBuch/project.properties
 TeamPlanBuch/bin
 TeamPlanBuch/gen
 *.cache
+*.project
