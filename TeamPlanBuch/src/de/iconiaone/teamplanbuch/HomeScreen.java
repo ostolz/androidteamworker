@@ -11,22 +11,22 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class HomeScreen extends Activity implements OnClickListener {
+public class HomeScreen extends Activity {
 
-	Button eventButton;
-	Button exitButton;
+	//Button eventButton;
+	//Button exitButton;
 	
-	/*@Override
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home_screen);
 		
-		eventButton = (Button) findViewById(R.id.eventButton);
-		eventButton.setOnClickListener(this);
+		//eventButton = (Button) findViewById(R.id.eventButton);
+		//eventButton.setOnClickListener(this);
 		
-		exitButton = (Button) findViewById(R.id.exitButton);
-		exitButton.setOnClickListener(this);
-	}*/
+		//exitButton = (Button) findViewById(R.id.exitButton);
+		//exitButton.setOnClickListener(this);
+	}
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -40,9 +40,13 @@ public class HomeScreen extends Activity implements OnClickListener {
 	        	Intent intent2 = new Intent(this, LoginScreen.class);
 	    	    startActivity(intent2);
 	            return true;
-	        case R.id.mail:
+	        case R.id.contact:
 	        	Intent intent3 = new Intent(this, MailScreen.class);
 	        	startActivity(intent3);
+	        	return true;
+	        case R.id.action_settings:
+	        	Intent intent4 = new Intent(this, SettingsScreen.class);
+	        	startActivity(intent4);
 	        	return true;
 	        default:
 	            return super.onOptionsItemSelected(item);
@@ -56,7 +60,7 @@ public class HomeScreen extends Activity implements OnClickListener {
 		return true;
 	}
 
-	@Override
+	/*@Override
 	public void onClick(View v) {
 	if(v == eventButton)
 	{
@@ -69,6 +73,6 @@ public class HomeScreen extends Activity implements OnClickListener {
 		Intent intent = new Intent(this, LoginScreen.class);
 	    startActivity(intent);
 	}
-	}
+	}*/
 
 }
