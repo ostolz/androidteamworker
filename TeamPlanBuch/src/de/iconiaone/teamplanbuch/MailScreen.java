@@ -27,6 +27,10 @@ public class MailScreen extends Activity implements OnClickListener {
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // Handle item selection
 	    switch (item.getItemId()) {
+	    	case R.id.action_settings:
+	    		Intent intent1 = new Intent(this, SettingsScreen.class);
+	    		startActivity(intent1);
+	    		return true;
 	        case R.id.logout:
 	        	Intent intent2 = new Intent(this, LoginScreen.class);
 	    	    startActivity(intent2);

@@ -28,8 +28,8 @@ public class SettingsScreen extends Activity implements OnClickListener {
 	    // Handle item selection
 	    switch (item.getItemId()) {
 	        case R.id.logout:
-	        	Intent intent2 = new Intent(this, LoginScreen.class);
-	    	    startActivity(intent2);
+	        	Intent intent = new Intent(this, LoginScreen.class);
+	    	    startActivity(intent);
 	            return true;
 	        default:
 	            return super.onOptionsItemSelected(item);

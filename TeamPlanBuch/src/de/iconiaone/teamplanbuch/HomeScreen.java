@@ -40,9 +40,13 @@ public class HomeScreen extends Activity {
 	        	Intent intent2 = new Intent(this, LoginScreen.class);
 	    	    startActivity(intent2);
 	            return true;
-	        case R.id.mail:
+	        case R.id.contact:
 	        	Intent intent3 = new Intent(this, MailScreen.class);
 	        	startActivity(intent3);
+	        	return true;
+	        case R.id.action_settings:
+	        	Intent intent4 = new Intent(this, SettingsScreen.class);
+	        	startActivity(intent4);
 	        	return true;
 	        default:
 	            return super.onOptionsItemSelected(item);

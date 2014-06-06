@@ -41,15 +41,15 @@ public class CreateEventScreen extends Activity implements OnClickListener {
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // Handle item selection
 	    switch (item.getItemId()) {
-	        case R.id.event:
-	        	Intent intent1 = new Intent(this, CreateEventScreen.class);
+	        case R.id.action_settings:
+	        	Intent intent1 = new Intent(this, SettingsScreen.class);
 	    	    startActivity(intent1);
 	            return true;
 	        case R.id.logout:
 	        	Intent intent2 = new Intent(this, LoginScreen.class);
 	    	    startActivity(intent2);
 	            return true;
-	        case R.id.mail:
+	        case R.id.contact:
 	        	Intent intent3 = new Intent(this, MailScreen.class);
 	        	startActivity(intent3);
 	        	return true;

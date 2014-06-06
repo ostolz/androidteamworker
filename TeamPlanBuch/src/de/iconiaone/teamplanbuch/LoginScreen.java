@@ -3,6 +3,7 @@ package de.iconiaone.teamplanbuch;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -40,6 +41,19 @@ public class LoginScreen extends Activity implements OnClickListener {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.login_screen, menu);
 		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle item selection
+	    switch (item.getItemId()) {
+	        case R.id.action_settings:
+	        	Intent intent = new Intent(this, SettingsScreen.class);
+	    	    startActivity(intent);
+	            return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
 	}
 
 	@Override
