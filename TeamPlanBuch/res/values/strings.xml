@@ -21,6 +21,7 @@
     <string name="title_activity_create_event_screen">CreateEventScreen</string>     
     <string name="title_activity_mail_screen">CreateEventScreen</string>    
     <string name="title_activity_settings_screen">CreateEventScreen</string>   
+    <string name="title_activity_profil_screen">ProfilScreen</string>   
     <string name="back_home">Home</string>
     <string name="create_event">Termin erstellen</string>
 	<string name="exit">Abmelden</string>
