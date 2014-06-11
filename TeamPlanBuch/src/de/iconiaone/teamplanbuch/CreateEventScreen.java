@@ -33,7 +33,7 @@ public class CreateEventScreen extends Activity implements OnClickListener {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.home_screen, menu);
+		getMenuInflater().inflate(R.menu.create_event_screen, menu);
 		return true;
 	}
 	
@@ -52,6 +52,10 @@ public class CreateEventScreen extends Activity implements OnClickListener {
 	        case R.id.contact:
 	        	Intent intent3 = new Intent(this, MailScreen.class);
 	        	startActivity(intent3);
+	        	return true;
+	        case R.id.profil:
+	        	Intent intent4 = new Intent(this, ProfilScreen.class);
+	        	startActivity(intent4);
 	        	return true;
 	        default:
 	            return super.onOptionsItemSelected(item);

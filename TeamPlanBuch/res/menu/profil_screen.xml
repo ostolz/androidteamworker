@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@id/action_settings" android:title="@string/action_settings" android:orderInCategory="100"></item>
+    <item android:id="@id/createEventButton" android:title="@string/event" android:orderInCategory="100"></item>
+    <item android:id="@id/backHomeButton" android:title="@string/back_home" android:orderInCategory="100"></item>
+    <item android:id="@id/contact" android:title="@string/contact" android:orderInCategory="100"></item>
+    <item android:id="@id/logout" android:title="@string/logout" android:orderInCategory="100"></item>
+    
+
+</menu>

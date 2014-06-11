@@ -1,20 +1,12 @@
 package de.iconiaone.teamplanbuch;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.EditText;
 
 public class HomeScreen extends Activity {
-
-	//Button eventButton;
-	//Button exitButton;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +14,6 @@ public class HomeScreen extends Activity {
 		setContentView(R.layout.activity_home_screen);
 		
 		MySQLiteHelper db = new MySQLiteHelper(this);
-		
-		//eventButton = (Button) findViewById(R.id.eventButton);
-		//eventButton.setOnClickListener(this);
-		
-		//exitButton = (Button) findViewById(R.id.exitButton);
-		//exitButton.setOnClickListener(this);
 	}
 	
 	@Override
@@ -50,6 +36,10 @@ public class HomeScreen extends Activity {
 	        	Intent intent4 = new Intent(this, SettingsScreen.class);
 	        	startActivity(intent4);
 	        	return true;
+	        case R.id.profil:
+	        	Intent intent5 = new Intent(this, ProfilScreen.class);
+	        	startActivity(intent5);
+	        	return true;
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
@@ -61,20 +51,5 @@ public class HomeScreen extends Activity {
 		getMenuInflater().inflate(R.menu.home_screen, menu);
 		return true;
 	}
-
-	/*@Override
-	public void onClick(View v) {
-	if(v == eventButton)
-	{
-		Intent intent = new Intent(this, CreateEventScreen.class);
-	    startActivity(intent);
-	}
-	
-	if(v == exitButton)
-	{
-		Intent intent = new Intent(this, LoginScreen.class);
-	    startActivity(intent);
-	}
-	}*/
 
 }
