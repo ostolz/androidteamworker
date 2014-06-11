@@ -1,5 +1,6 @@
 package de.iconiaone.teamplanbuch;
 
+import android.R.menu;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -8,12 +9,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 
 public class HomeScreen extends Activity {
 
 	//Button eventButton;
+	
 	//Button exitButton;
 	
 	@Override
@@ -22,6 +26,7 @@ public class HomeScreen extends Activity {
 		setContentView(R.layout.activity_home_screen);
 		
 		MySQLiteHelper db = new MySQLiteHelper(this);
+		 populateListView();
 		
 		//eventButton = (Button) findViewById(R.id.eventButton);
 		//eventButton.setOnClickListener(this);
@@ -29,6 +34,17 @@ public class HomeScreen extends Activity {
 		//exitButton = (Button) findViewById(R.id.exitButton);
 		//exitButton.setOnClickListener(this);
 	}
+	private void populateListView(){
+    	
+	    String[] EventItems = {"Russian Bearfight", "Russian Icediving", "Russian Wodkadrinking","asja!"};
+	    
+	 // Binding resources Array to ListAdapter
+	    ArrayAdapter<String> adapter= new ArrayAdapter<String>(this,R.layout.list_item , EventItems);
+	      
+	     //Calling the view
+	     ListView list = (ListView)findViewById(R.id.listView1);
+	     list.setAdapter(adapter);
+	    }
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -60,7 +76,10 @@ public class HomeScreen extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.home_screen, menu);
 		return true;
+	
 	}
+	
+    
 
 	/*@Override
 	public void onClick(View v) {
