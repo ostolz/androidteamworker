@@ -7,9 +7,9 @@
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="username">Username</string>
-    <string name="title_activity_register_screen">RegisterScreen</string>
+    <string name="title_activity_register_screen">Registrierung</string>
     <string name="event">Termin erstellen</string>
-    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="title_activity_home_screen">Home</string>
     <string name="vorname">Vorname</string>
     <string name="nachname">Nachname</string>
     <string name="plz">PLZ</string>
@@ -18,10 +18,11 @@
     <string name="strasse">Strasse+Hausnummer</string>
     <string name="password">Passwort</string>
     <string name="passwordconfirm">Passwort wiederholen</string>
-    <string name="title_activity_create_event_screen">CreateEventScreen</string>     
-    <string name="title_activity_mail_screen">CreateEventScreen</string>    
-    <string name="title_activity_settings_screen">CreateEventScreen</string>   
-    <string name="title_activity_profil_screen">ProfilScreen</string>   
+    <string name="title_activity_create_event_screen">Termin erstellen</string>     
+    <string name="title_activity_mail_screen">Email an Leiter</string>    
+    <string name="title_activity_settings_screen">Einstellungen</string>   
+    <string name="title_activity_profil_screen">Profil ändern</string>   
+    <string name="title_activity_login_screen">Login</string>  
     <string name="back_home">Home</string>
     <string name="create_event">Termin erstellen</string>
 	<string name="exit">Abmelden</string>
