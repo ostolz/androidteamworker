@@ -1,12 +1,16 @@
 package de.iconiaone.teamplanbuch;
 
+<<<<<<< HEAD
 import android.R.menu;
 import android.os.Bundle;
+=======
+>>>>>>> 6880adac156cd6bb45f9c8167edf1b7aecb6fac0
 import android.app.Activity;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+<<<<<<< HEAD
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -19,6 +23,10 @@ public class HomeScreen extends Activity {
 	//Button eventButton;
 	
 	//Button exitButton;
+=======
+
+public class HomeScreen extends Activity {
+>>>>>>> 6880adac156cd6bb45f9c8167edf1b7aecb6fac0
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +34,7 @@ public class HomeScreen extends Activity {
 		setContentView(R.layout.activity_home_screen);
 		
 		MySQLiteHelper db = new MySQLiteHelper(this);
+<<<<<<< HEAD
 		 populateListView();
 		
 		//eventButton = (Button) findViewById(R.id.eventButton);
@@ -33,6 +42,8 @@ public class HomeScreen extends Activity {
 		
 		//exitButton = (Button) findViewById(R.id.exitButton);
 		//exitButton.setOnClickListener(this);
+=======
+>>>>>>> 6880adac156cd6bb45f9c8167edf1b7aecb6fac0
 	}
 	private void populateListView(){
     	
@@ -66,6 +77,10 @@ public class HomeScreen extends Activity {
 	        	Intent intent4 = new Intent(this, SettingsScreen.class);
 	        	startActivity(intent4);
 	        	return true;
+	        case R.id.profil:
+	        	Intent intent5 = new Intent(this, ProfilScreen.class);
+	        	startActivity(intent5);
+	        	return true;
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
@@ -80,20 +95,5 @@ public class HomeScreen extends Activity {
 	}
 	
     
-
-	/*@Override
-	public void onClick(View v) {
-	if(v == eventButton)
-	{
-		Intent intent = new Intent(this, CreateEventScreen.class);
-	    startActivity(intent);
-	}
-	
-	if(v == exitButton)
-	{
-		Intent intent = new Intent(this, LoginScreen.class);
-	    startActivity(intent);
-	}
-	}*/
 
 }
