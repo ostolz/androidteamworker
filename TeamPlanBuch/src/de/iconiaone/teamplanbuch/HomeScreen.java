@@ -20,24 +20,24 @@ public class HomeScreen extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // Handle item selection
 	    switch (item.getItemId()) {
-	        case R.id.event:
-	        	Intent intent1 = new Intent(this, CreateEventScreen.class);
+	        case R.id.action_settings:
+	        	Intent intent1 = new Intent(this, SettingsScreen.class);
 	    	    startActivity(intent1);
 	            return true;
-	        case R.id.logout:
-	        	Intent intent2 = new Intent(this, LoginScreen.class);
+	        case R.id.event:
+	        	Intent intent2 = new Intent(this, CreateEventScreen.class);
 	    	    startActivity(intent2);
 	            return true;
-	        case R.id.contact:
-	        	Intent intent3 = new Intent(this, MailScreen.class);
+	        case R.id.profil:
+	        	Intent intent3 = new Intent(this, ProfilScreen.class);
 	        	startActivity(intent3);
 	        	return true;
-	        case R.id.action_settings:
-	        	Intent intent4 = new Intent(this, SettingsScreen.class);
+	        case R.id.contact:
+	        	Intent intent4 = new Intent(this, MailScreen.class);
 	        	startActivity(intent4);
 	        	return true;
-	        case R.id.profil:
-	        	Intent intent5 = new Intent(this, ProfilScreen.class);
+	        case R.id.logout:
+	        	Intent intent5 = new Intent(this, LoginScreen.class);
 	        	startActivity(intent5);
 	        	return true;
 	        default:
