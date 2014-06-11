@@ -34,7 +34,8 @@
         android:layout_alignBottom="@+id/textView2"
         android:layout_alignParentRight="true"
         android:layout_marginRight="28dp"
-        android:src="@drawable/pic1" android:contentDescription="TODO"/>
+        android:src="@drawable/pic1" 
+        android:contentDescription="TODO"/>
 
     <TextView
         android:id="@+id/textView3"
