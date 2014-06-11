@@ -34,6 +34,8 @@ public class LoginScreen extends Activity implements OnClickListener {
 		
 		loginButton.setOnClickListener(this);
 		registerButton.setOnClickListener(this);
+		
+		
 	}
 
 	@Override

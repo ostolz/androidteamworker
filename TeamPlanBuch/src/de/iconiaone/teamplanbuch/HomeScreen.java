@@ -21,6 +21,8 @@ public class HomeScreen extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home_screen);
 		
+		MySQLiteHelper db = new MySQLiteHelper(this);
+		
 		//eventButton = (Button) findViewById(R.id.eventButton);
 		//eventButton.setOnClickListener(this);
 		

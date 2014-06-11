@@ -1,13 +1,10 @@
 package de.iconiaone.teamplanbuch;
 
-
 public class DBOperations {
-	
-	private static final String DBNAME = "iconiadb";
-	
-	public static boolean initDb()
+		
+	public static void initDb()
 	{
-		return true;
+		
 	}
 	
 	public static boolean registerUser(String user, String pass, String email, String sur, String last, String teampreferred, String address, String plz, String wohnort)
