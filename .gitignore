@@ -2,8 +2,6 @@ TeamPlanBuch/build.xml
 TeamPlanBuch/local.properties
 TeamPlanBuch/ant.properties
 TeamPlanBuch/build.xml
-TeamPlanBuch/local.properties
-TeamPlanBuch/project.properties
 TeamPlanBuch/bin
 TeamPlanBuch/gen
 *.cache
