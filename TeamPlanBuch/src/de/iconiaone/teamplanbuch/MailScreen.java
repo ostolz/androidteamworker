@@ -5,11 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
 
-public class MailScreen extends Activity implements OnClickListener {
-
+public class MailScreen extends Activity {
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -39,12 +38,5 @@ public class MailScreen extends Activity implements OnClickListener {
 	            return super.onOptionsItemSelected(item);
 	    }
 	}
-	
-	@Override
-	public void onClick(View v) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	
 }

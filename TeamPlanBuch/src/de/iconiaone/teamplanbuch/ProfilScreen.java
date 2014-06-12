@@ -5,8 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
 
-public class ProfilScreen extends Activity{
+public class ProfilScreen extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,4 +53,5 @@ public class ProfilScreen extends Activity{
 		getMenuInflater().inflate(R.menu.profil_screen, menu);
 		return true;
 	}
+
 }
