@@ -66,6 +66,8 @@ public class CreateEventScreen extends Activity implements OnClickListener {
 	public void onClick(View v) {
 	if(v == createEventButton)
 	{
+		Intent intent = new Intent(this, HomeScreen.class);
+	    startActivity(intent);
 		Toast.makeText(getApplicationContext(),	"Termin erfolgreich erstellt", Toast.LENGTH_LONG).show();
 	}
 	
