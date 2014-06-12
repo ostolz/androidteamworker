@@ -32,4 +32,6 @@
 	<string name="nowitzki">nowitzki</string>
 	<string name="eventlist">Liste der Events</string>
 	<string name="update">Update</string>
+	<string name="yes">ich nehme teil</string>
+	<string name="no">ich nehme nicht teil</string>
 </resources>
