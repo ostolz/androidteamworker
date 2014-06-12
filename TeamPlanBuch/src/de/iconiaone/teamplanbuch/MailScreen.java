@@ -5,14 +5,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
 
-public class MailScreen extends Activity {
+public class MailScreen extends Activity implements OnClickListener {
 	
+	Button sendenButton;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_mail_screen);
+		
+		sendenButton = (Button) findViewById(R.id.sendenButton);
+		sendenButton.setOnClickListener(this);
 	}
 
 	@Override
@@ -37,6 +45,16 @@ public class MailScreen extends Activity {
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
+	}
+
+	@Override
+	public void onClick(View v) {
+		if (v == sendenButton)
+		{
+			Intent intent = new Intent(this, HomeScreen.class);
+		    startActivity(intent);
+		    Toast.makeText(getApplicationContext(), "Nachricht wurde abgeschickt", Toast.LENGTH_LONG).show();
+		}
 	}
 	
 }

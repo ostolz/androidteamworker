@@ -10,12 +10,17 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class ProfilScreen extends Activity {
+public class ProfilScreen extends Activity implements OnClickListener {
+	
+	Button updateButton;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_profil_screen);
+		
+		updateButton = (Button) findViewById(R.id.updateButton);
+		updateButton.setOnClickListener(this);
 	}
 	
 	@Override
@@ -52,6 +57,16 @@ public class ProfilScreen extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.profil_screen, menu);
 		return true;
+	}
+
+	@Override
+	public void onClick(View v) {
+		if (v == updateButton)
+		{
+			Intent intent = new Intent(this, HomeScreen.class);
+		    startActivity(intent);
+		    Toast.makeText(getApplicationContext(), "Profil wurde geändert", Toast.LENGTH_LONG).show();
+		}
 	}
 
 }

@@ -1,16 +1,14 @@
 package de.iconiaone.teamplanbuch;
 
-import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 
 public class LoginScreen extends Activity implements OnClickListener {
 
