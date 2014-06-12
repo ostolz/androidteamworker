@@ -29,6 +29,7 @@ public class HomeScreen extends Activity {
 				
 		//Listenobjekte definieren
 	String[] myItems = { "EVENT1","EVENT2","EVENT3", "EVENT4"};
+	
 		
 		// ListView Adapter
 	ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item, myItems);
