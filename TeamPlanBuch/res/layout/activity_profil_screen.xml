@@ -5,14 +5,6 @@
     android:background="@drawable/trans1"
     android:orientation="vertical" >
 
-    <ImageView
-        android:contentDescription="TODO"
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="250dp"
-        android:src="@drawable/ic_launcher" />
-
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -99,5 +91,16 @@
         android:ems="10"
         android:hint="@string/password" 
         android:inputType="textPassword"/>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/log_password"
+        android:contentDescription="TODO"
+        android:src="@drawable/pic1" />
 
 </RelativeLayout>
