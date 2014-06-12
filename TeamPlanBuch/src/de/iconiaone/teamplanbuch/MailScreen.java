@@ -12,6 +12,14 @@ import android.widget.Toast;
 
 public class MailScreen extends Activity implements OnClickListener {
 	
+	// DATENBANK-AKTIONEN //
+	
+	// falls keine Mailadresse eingetragen ist --> Fehlermeldung
+	// falls kein Text eingetragen wurde --> Abfrage ob das so gewollt war
+	// falls alles passt --> Erfolgsmeldung und zurück zu Home
+	
+	// so wie der Screen jetzt aussieht soll es ja bestimmt nicht implementiert werden, ka ob DB notwendig
+	
 	Button sendenButton;
 	
 	@Override

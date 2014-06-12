@@ -14,6 +14,10 @@ import android.widget.TextView;
 
 public class HomeScreen extends Activity {
 	
+	// DATENBANK-AKTIONEN //
+	
+	// keine, dient zur Übersicht und Navigation
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

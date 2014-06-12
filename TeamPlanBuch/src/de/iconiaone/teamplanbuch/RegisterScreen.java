@@ -13,6 +13,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class RegisterScreen extends Activity implements OnClickListener {
+	
+	// DATENBANK-AKTIONEN //
+	
+	// falls der Username schon existiert --> Fehlermeldung und neu laden Registrierung
+	// falls die beiden Passwörter ungleich sind --> Fehlermeldung und neu laden
+	// falls nicht alle Felder ausgefüllt sind --> neu laden und rot markieren
+	// falls alles passt --> Eintrag in die DB und Erfolgsmeldung
 
 	SQLiteDatabase database;
 	

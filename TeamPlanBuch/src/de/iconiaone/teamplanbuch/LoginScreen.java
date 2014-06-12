@@ -12,6 +12,11 @@ import android.widget.Toast;
 
 public class LoginScreen extends Activity implements OnClickListener {
 
+	// DATENBANK-AKTIONEN //
+	
+	// wenn Username und Passwort zu einem Eintrag passen --> Erfolgsmeldung, weiter zu Home
+	// bei Konflikt --> Fehlermeldung und erneuter Aufruf vom Login
+	
 	SQLiteDatabase database;
 	
 	// GUI Objekte

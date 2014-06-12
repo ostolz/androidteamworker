@@ -11,6 +11,12 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class CreateEventScreen extends Activity implements OnClickListener {
+	
+	// DATENBANK-AKTIONEN //
+	
+	// Überprüfung ob sich der zu erstellende Termin zeitlich mit einem
+	// bereits existierenden Termin überschneidet --> Fehlermeldung
+	// falls nicht den Termin in die Datenbank eintragen und Erfolgsmeldung (s. unten)
 
 	Button createEventButton;
 	

@@ -12,6 +12,11 @@ import android.widget.Toast;
 
 public class ProfilScreen extends Activity implements OnClickListener {
 	
+	// DATENBANK-AKTIONEN //
+	
+	// die Datenfelder werden mit den Daten aus der DB vorausgefüllt
+	// sobald etwas geändert wurde und der Update-Button betätigt wird --> Meldung und zurück zu Home
+	
 	Button updateButton;
 	
 	@Override
