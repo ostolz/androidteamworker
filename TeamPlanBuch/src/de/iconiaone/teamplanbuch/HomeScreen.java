@@ -5,13 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class HomeScreen extends Activity{
+public class HomeScreen extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +21,8 @@ public class HomeScreen extends Activity{
 		
 		MySQLiteHelper db = new MySQLiteHelper(this);
 		
-		//Listenobjekte erstellen
-		populateListView();
 		
-		
-	
-	}
-	
-	private void populateListView(){
-	
+				
 		//Listenobjekte definieren
 	String[] myItems = { "EVENT1","EVENT2","EVENT3", "EVENT4"};
 		
@@ -38,10 +32,31 @@ public class HomeScreen extends Activity{
 		// Liste aufrufen
 	ListView list = (ListView) findViewById(R.id.listViewHome);
 	list.setAdapter(adapter);
+	
+	//Listener
+	list.setOnItemClickListener(new OnItemClickListener() {
+        public void onItemClick(AdapterView<?> parent, View view,
+            int position, long id){
+        	
+        	// selected item 
+            String product = ((TextView) view).getText().toString();
+             
+            // Launching new Activity on selecting single List Item
+            Intent i = new Intent(getApplicationContext(), SingleItem.class);
+            // sending data to new activity
+            i.putExtra("product", product);
+            startActivity(i);
+           
+        }
+        });
+	
+	
+	
 	}
 	
+	
 
-		
+	
 		
 	
 	
