@@ -2,7 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/free_sport"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -14,57 +13,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:layout_toRightOf="@+id/textView1"
-        android:ems="10"
-        android:inputType="textPersonName" />
+        android:ems="10" 
+        android:hint="@string/username" />
 
     <EditText
         android:id="@+id/log_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/log_username"
         android:layout_below="@+id/log_username"
+        android:layout_centerHorizontal="true"
         android:ems="10"
+        android:hint="@string/password"
         android:inputType="textPassword" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/log_username"
-        android:layout_alignBottom="@+id/log_username"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="22dp"
-        android:text="@string/username"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/log_password"
-        android:layout_alignBottom="@+id/log_password"
-        android:layout_alignLeft="@+id/textView1"
-        android:text="@string/password"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/log_password"
+        android:layout_alignLeft="@+id/log_username"
         android:layout_below="@+id/log_password"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="14dp"
         android:text="@string/login" />
 
     <Button
         android:id="@+id/registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/loginButton"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="28dp"
+        android:layout_alignBaseline="@+id/loginButton"
+        android:layout_alignBottom="@+id/loginButton"
+        android:layout_alignRight="@+id/log_username"
         android:text="@string/register" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/free_sport" />
 
 </RelativeLayout>

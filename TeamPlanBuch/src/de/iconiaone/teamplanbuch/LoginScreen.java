@@ -50,8 +50,7 @@ public class LoginScreen extends Activity implements OnClickListener {
 			if(DBOperations.checkLogin(vUsername, vPassword))
 			{
 				Intent intent = new Intent(this, HomeScreen.class);
-			    startActivity(intent);	
-			    Toast.makeText(getApplicationContext(), "Login erfolgreich", Toast.LENGTH_LONG).show();
+			    startActivity(intent);		
 			}
 			else
 				Toast.makeText(getApplicationContext(), "Login fehlgeschlagen", Toast.LENGTH_LONG).show();
@@ -62,7 +61,6 @@ public class LoginScreen extends Activity implements OnClickListener {
 		{
 			Intent intent = new Intent(this, RegisterScreen.class);
 		    startActivity(intent);
-		    Toast.makeText(getApplicationContext(), "Bitte Daten eintragen", Toast.LENGTH_LONG).show();
 		}
 	}
 

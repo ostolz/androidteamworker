@@ -16,7 +16,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="50dp"
-        android:text="Vfukas" />
+        android:text="@string/username" />
 
     <TextView
         android:id="@+id/textView2"
@@ -25,7 +25,7 @@
         android:layout_alignBaseline="@+id/textView1"
         android:layout_alignBottom="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:text="FC Pils 08" />
+        android:text="@string/team" />
 
     <ImageView
         android:id="@+id/imageView1"
@@ -38,12 +38,12 @@
         android:contentDescription="TODO"/>
 
     <TextView
-        android:id="@+id/liste"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/imageView1"
-        android:text="Liste der Events"
+        android:text="List View"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

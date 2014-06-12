@@ -14,7 +14,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Adresse:" />
+        android:text="TextView" />
 
     <EditText
         android:id="@+id/editText1"
@@ -30,15 +30,9 @@
     <EditText
         android:id="@+id/editText2"
         android:layout_width="match_parent"
-        android:layout_height="202dp"
-        android:ems="10"
-        android:gravity="top|left"
-        android:hint="Bitte Text eingeben" />
-
-    <Button
-        android:id="@+id/sendenButton"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Abschicken" />
+        android:layout_weight="0.20"
+        android:hint="Bitte Text eingeben"
+        android:ems="10" />
 
 </LinearLayout>
