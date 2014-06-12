@@ -23,7 +23,6 @@
     <string name="title_activity_settings_screen">Einstellungen</string>   
     <string name="title_activity_profil_screen">Profil ändern</string>   
     <string name="title_activity_login_screen">Login</string>  
-    <string name="back_home">Home</string>
     <string name="create_event">Termin erstellen</string>
 	<string name="exit">Abmelden</string>
 	<string name="logout">Logout</string>

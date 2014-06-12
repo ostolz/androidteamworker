@@ -26,12 +26,4 @@
         android:layout_marginTop="50dp"
         android:text="@string/create_event" />
 
-    <Button
-        android:id="@+id/backHomeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:layout_marginRight="22dp"
-        android:text="@string/back_home" />
-
 </LinearLayout>

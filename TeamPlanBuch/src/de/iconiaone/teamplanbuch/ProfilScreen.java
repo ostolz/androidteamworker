@@ -43,10 +43,6 @@ public class ProfilScreen extends Activity implements OnClickListener {
 	        	Intent intent4 = new Intent(this, SettingsScreen.class);
 	        	startActivity(intent4);
 	        	return true;
-	        case R.id.backHomeButton:
-	        	Intent intent5 = new Intent(this, HomeScreen.class);
-	        	startActivity(intent5);
-	        	return true;
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
